@@ -1,3 +1,29 @@
-.App {
-  text-align: center;
+* {
+  font-family: ubuntu;
+  color: rgb(78, 75, 74) !important;
+}
+
+.header {
+  color: rgb(78, 75, 74) !important;
+}
+.resultBox {
+  display: flex;
+
+  align-items: center;
+  height: 50px;
+  border: 1px solid rgb(78, 75, 74);
+  border-radius: 45px;
+}
+.resultBox div {
+  display: flex;
+
+  align-items: center;
+  height: 44px;
+}
+
+.image-logo {
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  margin-left: -8px;
 }

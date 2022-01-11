@@ -1,38 +1,31 @@
 import React from 'react'
-
-
-
 interface IProps {
-    person: {
-        image: string,
-        name: string,
-        work: string,
-        roll: string,
-        phone: string
+    people: {
+        image: string;
+        name: string;
+        address: string;
+        phone: number;
     }[]
 }
-// const List = (props: IProps) => {
 
-const List: React.FC<IProps> = ({ person }) => {
-    console.log(person);
+
+const List = ({ people }: IProps) => {
     const renderPerson = (): JSX.Element[] => {
-        return person.map((user) => {
-            return <>
-                <div style={{ margin: "auto 300px", display: "flex", justifyContent: "space-around", fontFamily: "ubuntu" }}>
-                    <img src={user.image} alt={user.name} height={67} style={{ borderRadius: "45px" }} />
-                    <p>{user.name}</p>
-                    <p> {user.phone}  </p>
-                    <p> Roll No :  {user.roll}</p>
-                    <p>  Job :  {user.work}</p>
+        return people.map((user) => {
+            return (
+                <div className="row  my-2  resultBox mx-5">
+                    <div className="col-md-2"><img src={user.image} alt="user.index" height={12} className='image-logo' /> </div>
+                    <div className="col-md-3 text-center"> {user.name} </div>
+                    <div className="col-md-3 text-center">{user.address}</div>
+                    <div className="col-md-4 text-center">+92 {user.phone}</div>
                 </div>
-            </>
+            )
         })
     }
-
     return (
-        <div>
-            {renderPerson()}
-        </div>
+        <>
+            {renderPerson}
+        </>
     )
 }
 
