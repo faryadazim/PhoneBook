@@ -10,8 +10,12 @@ interface IProps {
 
 
 const List = ({ people }: IProps) => {
+
+
     const renderPerson = (): JSX.Element[] => {
         return people.map((user) => {
+            console.log("user");
+
             return (
                 <div className="row  my-2  resultBox mx-5">
                     <div className="col-md-2"><img src={user.image} alt="user.index" height={12} className='image-logo' /> </div>
@@ -22,8 +26,12 @@ const List = ({ people }: IProps) => {
             )
         })
     }
+
     return (
         <>
+            hj
+
+
             {renderPerson}
         </>
     )
