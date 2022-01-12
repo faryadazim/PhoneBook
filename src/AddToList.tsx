@@ -32,6 +32,9 @@ const AddToList: React.FC<Props> = ({ people, setPeople }) => {
             })
     }
     const addUser = () => {
+        if (!input.image || !input.name || !input.phone || !input.address) {
+            return
+        }
         setPeople([
             ...people,
             input
