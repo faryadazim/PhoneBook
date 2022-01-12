@@ -1,6 +1,5 @@
-# This is a basic workflow to help you get started with Actions
 
-name: CI
+name: PhoneBook TypesScript
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -40,4 +39,4 @@ jobs:
       run: npm install -g surge
     
     - name: deploying on surge
-      run: surge ./build shoe-store-farjkd-azim.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+      run: surge ./build phoneBook-Typescript-faryad-azim.surge.sh --token ${{ secrets.SURGE_TOKEN }}
