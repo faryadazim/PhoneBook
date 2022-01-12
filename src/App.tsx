@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
+import AddToList from './AddToList';
 import List from './List';
 import './style.css'
 
-interface IState {
+export interface IState {
   people: {
     image: string;
     name: string;
@@ -23,7 +24,6 @@ const App = () => {
       phone: 3152456768
     }
   ])
-  console.log(setPeople);
 
   return (
     <div className='App'>
@@ -34,7 +34,7 @@ const App = () => {
           </div>
         </div>
         <List people={people} />
-
+        <AddToList people={people} setPeople={setPeople} />
       </div>
     </div>
   )
